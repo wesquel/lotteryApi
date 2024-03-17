@@ -2,7 +2,6 @@ package com.addsonweslley.loteriasapi.controllers;
 
 import com.addsonweslley.loteriasapi.dtos.Bet.BetRequest;
 import com.addsonweslley.loteriasapi.services.BetService;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;

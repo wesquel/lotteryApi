@@ -5,7 +5,6 @@ import com.addsonweslley.loteriasapi.dtos.Bet.BetResponse;
 import com.addsonweslley.loteriasapi.models.Bet;
 import com.addsonweslley.loteriasapi.models.Ticket;
 import com.addsonweslley.loteriasapi.repository.BetRepository;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 
@@ -31,7 +30,7 @@ public class BetService {
         bet.setId(UUID.randomUUID());
         bet.setToltalNumbers(betRequest.toltalNumbers());
         bet.setMaxNumbersByUsers(betRequest.maxNumbersByUsers());
-        List<Ticket> ticketList = new ArrayList<Ticket>();
+        List<Ticket> ticketList = new ArrayList<>();
         bet.setTicketList(ticketList);
         betRepository.save(bet);
         return ResponseEntity.ok().body(betToResponse(bet));
